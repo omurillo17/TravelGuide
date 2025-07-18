@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto • Travel Find</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+    <nav class="topnav">
+        <div class="brand">
+          <i class="fa-solid fa-plane-departure"></i>
+          Travel  With Me
+        </div>
+      
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      
+        <form id="searchForm" class="search">
+          <input  type="search" placeholder="Enter a destination or keyword">
+          <button type="submit"  class="btn-search">Buscar</button>
+          <button type="button" class="btn-clear">Limpiar</button>
+        </form>
+      </nav>
+
+    <header class="hero hero-img">
+        <div class="hero__wrap">
+          <div class="hero__textblock">
+            <h1>CONTACT&nbsp;US</h1>
+            <p class="sub">Hola</p>
+          </div>
+    
+          <form id="contactForm" class="hero__form glass">
+            <label>Name
+              <input type="text" name="name" required>
+            </label>
+      
+            <label>Email
+              <input type="email" name="email" required>
+            </label>
+      
+            <label>Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+      
+            <button type="submit" class="btn-primary" style="width:100%">Submit</button>
+          </form>
+        </div>
+      </header>
+      
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      console.log('sent!', new FormData(e.target));
+      e.target.reset();
+    });
+  </script>
+
+</body>
+</html>
